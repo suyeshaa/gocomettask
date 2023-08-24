@@ -1,8 +1,11 @@
 export const productData = [
   {
     key: 1,
+    detailsimg:
+      "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg",
     brand: "Roadster",
     name: "Men Cotton Casual Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21448764/2023/3/24/2af18194-acef-44cf-909c-da17282b7f611679632954510-Louis-Philippe-Men-Shirts-8841679632953923-1.jpg",
     color: "Red",
     price: 999,
     originalPrice: 2450,
@@ -17,8 +20,12 @@ export const productData = [
   },
   {
     key: 2,
+    detailsimg:
+      "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg",
     brand: "Roadster",
     name: "Men Cotton Casual Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21448764/2023/3/24/2af18194-acef-44cf-909c-da17282b7f611679632954510-Louis-Philippe-Men-Shirts-8841679632953923-1.jpg",
+
     color: "Red",
     price: 989,
     originalPrice: 2450,
@@ -33,8 +40,12 @@ export const productData = [
   },
   {
     key: 3,
+    detailsimg:
+      "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg",
     brand: "Roadster",
     name: "Men Cotton Casual Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21448764/2023/3/24/2af18194-acef-44cf-909c-da17282b7f611679632954510-Louis-Philippe-Men-Shirts-8841679632953923-1.jpg",
+
     color: "Black",
     price: 979,
     originalPrice: 2450,
@@ -49,8 +60,12 @@ export const productData = [
   },
   {
     key: 4,
+    detailsimg:
+      "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg",
     brand: "Roadster4",
     name: "Men Cotton Casual Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21448764/2023/3/24/2af18194-acef-44cf-909c-da17282b7f611679632954510-Louis-Philippe-Men-Shirts-8841679632953923-1.jpg",
+
     color: "red",
     price: 969,
     originalPrice: 2450,
@@ -65,8 +80,12 @@ export const productData = [
   },
   {
     key: 5,
+    detailsimg:
+      "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg",
     brand: "Roadster5",
     name: "women Cotton Casual Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21448764/2023/3/24/2af18194-acef-44cf-909c-da17282b7f611679632954510-Louis-Philippe-Men-Shirts-8841679632953923-1.jpg",
+
     color: "red",
     price: 959,
     originalPrice: 2450,
@@ -81,8 +100,12 @@ export const productData = [
   },
   {
     key: 6,
+    detailsimg:
+      "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8717979/2019/3/20/585db9fe-1df0-458d-b218-6f514eabb9601553068826233-Mast--Harbour-Men-Shirts-4141553068825026-1.jpg",
     brand: "Roadster6",
     name: "Men Cotton Casual Shirt",
+    img: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/21448764/2023/3/24/2af18194-acef-44cf-909c-da17282b7f611679632954510-Louis-Philippe-Men-Shirts-8841679632953923-1.jpg",
+
     color: "red",
     price: 949,
     originalPrice: 2450,

@@ -1,0 +1,204 @@
+.main{
+  background-color: white;
+  color: #282c3f;
+}
+
+.mainpt{
+  /* padding: 20px 30px */
+}
+
+.mainpt1{
+  color: #5f6169;
+  font-size: 14px;
+  padding: 20px 30px
+
+}
+
+.mainpt1 span{
+  font-weight: 500;
+  font-size: 15px;
+  color: #282c3f;
+
+
+}
+
+.mainpt2{
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0px 30px;
+
+
+}
+
+.mainpt2 span{
+  color: #5f6169;
+  font-weight: 400;
+}
+
+.mainpt3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid  #e0dede;
+}
+
+.filter{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.sort{
+  font-size: 14px;
+  border: 1px  #d6d6d6 solid;
+  padding: 8px 10px ;
+  border-radius: 3px;
+  
+}
+
+.sort span{
+  color: #5f6169;
+
+}
+
+.sort-box{
+  border: none;
+  font-size: 14.2px;
+  font-weight: 600;
+  outline: none;
+  width: 180px;
+
+}
+
+.optn{
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.mainpt4{
+  display: flex;
+}
+
+.sidebar{
+  width: 15%;
+  /* padding: 20px 30px; */
+  border-right: 1px solid #e0dede;
+
+}
+
+.deets{
+  width: 85%;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+.card{
+  margin: 30px;
+}
+
+.brand{
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.info{
+  padding: 5px 10px;
+}
+
+/* .name , .price{
+  font-size: 14px;
+} */
+
+.price{
+  font-weight: 600; 
+}
+.name{
+  color:  #5f6169;
+
+}
+
+.m-comp{
+  font-size: 14px;
+}
+
+
+.card-price{
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+/* .ogprice, .disc{
+  font-size: 12px;
+} */
+
+.ogprice.m-comp , .disc.m-comp{
+  font-size: 12px;
+}
+
+.ogprice{
+  padding: 0 5px;
+  text-decoration: line-through;
+  color:  #5f6169;
+}
+
+.disc{
+  color: #ff905a;
+}
+
+.wishlist{
+  display: flex;
+  align-items: center;
+}
+
+.wishlist button{
+  background-color: white;
+  border: 1px solid  #e0dede;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 10px 10px;
+  color: #282c3f;
+  
+
+}
+
+.wishlist button:hover{
+  border: 1px solid  #a7a6a6;
+
+
+}
+
+.wishlist button span{
+  padding-left: 3px;
+}
+
+.card{
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.wlist{
+  margin: 60px 0 0 60px ;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wlist span{
+  /* color:  #5f6169; */
+  font-weight: 400;
+}
+
+

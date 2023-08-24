@@ -1,0 +1,112 @@
+.navdiv{
+  background-color: white;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.navpt1 ,.navpt2{
+  display: flex;
+  justify-content:space-around;
+}
+
+.navpt2{
+  margin: 0;
+
+
+}
+
+.navcateglist{
+  display: flex;
+  align-items: center;
+}
+
+.navcateg{
+  padding: 0 20px;
+  font-size:14px;
+  color: #34384b;
+  font-weight: 600;
+}
+
+.logo{
+  height: auto; 
+    width: auto; 
+    max-width: 55px; 
+    max-height:55px;
+}
+
+.searchform{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #F5F5F6;
+  width: 100%;
+  padding: 1px 10px;
+  border-radius: 3px;
+  flex-grow: 1;
+
+}
+
+.searchlogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbtn{
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  /* padding: 8px 10px 10px;fon */
+  color: #696e79;
+  font-size: 18px;
+ 
+
+}
+
+.searchbox{
+  background-color: #F5F5F6;
+  outline: none;
+
+  color: #828791;
+  width: 280px;
+  line-height: 24px;
+  font-size: 13px;
+  border: none;
+  padding: 8px 10px 10px;
+}
+
+.navpt3{
+  display: flex;
+  margin-left: 20px;
+}
+
+.navpt3>.sub{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px 15px;
+}
+
+.logo{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
+.sub{
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  transition: all 0.25s ease;
+
+}
+

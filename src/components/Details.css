@@ -1,0 +1,126 @@
+.details{
+  display: flex;
+  padding: 0 30px 20px 30px;
+}
+
+.pic{
+  width: 60%;
+}
+
+
+.infop{
+width: 40%;
+}
+
+.pic img{
+  width: 47%;
+  padding: 0 10px 5px 0;
+}
+
+.d-brand{
+  font-size: 24px;
+  font-weight: 600;
+  color:#282c3f;
+}
+
+.d-name{
+  font-size: 20px;
+  color:  #5f6169;
+  border-bottom: 1px solid  #e0dede;
+  
+  padding: 5px 0 10px 0;
+}
+
+.tea{
+  width: 100%;
+}
+
+.d-price{
+  display: flex;
+  padding: 10px 0;
+}
+
+.d-comp{
+  font-size: 50px;
+}
+
+.price {
+  font-size: 24px;
+ 
+}
+.ogprice , .disc{
+  font-size: 20px;
+}
+
+.ogprice{
+  margin: 0 10px;
+}
+
+
+
+.disc{
+  font-weight: 600;
+}
+
+.tea span{
+  color: #03a685;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.size span{
+  color: #282c3f;  
+  font-size: 16px;
+}
+
+.size{
+  padding-top: 30px;
+}
+
+.size button{
+  border-radius: 100%;
+  border: 1px solid  #b9b9b9 ;
+  font-weight: 600;
+  padding: 16px;
+  margin: 20px 10px;
+  background-color: white;
+}
+
+.bag-btn{
+  background-color: #ff3e6c;
+  color: white;
+  border: none;
+  padding: 20px 50px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.bag-btn span{
+  padding-left:10px ;
+  font-weight: 600;
+
+}
+
+.detailspt2{
+  display: flex;
+  margin: 10px 0;
+  border-bottom: 1px solid  #e0dede;
+  padding-bottom: 25px;
+
+}
+
+.wishlist-btn{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: 1px solid  #b9b9b9;
+  font-weight: 600;
+  padding: 20px 50px;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.wishlist-btn span{
+  padding-left: 10px;
+}

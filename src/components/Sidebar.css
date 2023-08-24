@@ -1,0 +1,25 @@
+.brand-optn ,.color-optn ,.disc-optn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  padding: 20px 30px;
+
+  border-bottom: 1px solid #e0dede;
+}
+
+.brand-optn span ,.color-optn span ,.disc-optn span{
+  padding: 5px 0 15px 0;
+  font-size: 14px;
+}
+
+.brand-optn label ,.color-optn label ,.disc-optn label{
+  font-size: 13px;
+  font-weight: 400;
+  padding: 3px 0;
+  color:  #7c7d81;
+}
+
+.brand-optn label span ,.color-optn label span,.disc-optn label span{
+  padding-left: 8px;
+}
