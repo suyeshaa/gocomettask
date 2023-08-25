@@ -186,3 +186,61 @@
 font-weight: 400;
 }
 
+
+.checkout-info{
+  font-size: 14px;
+  color:  #5f6169;
+font-weight: 400;
+display: flex;
+justify-content: space-between;
+margin: 30px 0;
+}
+
+.cart-info{
+  padding-top: 40px;
+  margin: 0 50px ;
+}
+
+.price-heading{
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.price-info{
+  color: #2c3e50;
+  font-size: 15px;
+  font-weight: 600;
+  border-top: 1px solid #e0dede;
+  padding-top: 30px ;
+
+  
+}
+
+.totPrice{
+  color:#2c3e50;
+}
+
+.totDisc{
+  color: #03a685;
+}
+
+.conven{
+  color: #2c3e50;
+}
+
+.conven span{
+
+  text-decoration: line-through;
+
+}
+
+.order-btn{
+  background-color: #ff3e6c;
+  color: white;
+  border: none;
+  padding: 10px 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 3px;
+  width: 100%;
+}
