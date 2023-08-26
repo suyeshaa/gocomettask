@@ -7,8 +7,9 @@ import { BsHeart } from "react-icons/bs";
 import { BsHandbag } from "react-icons/bs";
 import "./Nav.css";
 import CartModal from "./CartModal";
+import { productData } from "../data";
 
-const Nav = ({ wishlistArr, chooseCurrArr }) => {
+const Nav = ({ wishlistArr, chooseCurrData }) => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,15 @@ const Nav = ({ wishlistArr, chooseCurrArr }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(search);
-    navigate(`/search/${search}`);
+    // navigate(`/search/${search}`);
+    let searchedProduct = productData.filter((item) => {
+      return search.toLowerCase() === ""
+        ? item
+        : item.name.toLowerCase().includes(search);
+    });
+
+    console.log(searchedProduct);
+    chooseCurrData(searchedProduct);
   };
 
   // wishlist

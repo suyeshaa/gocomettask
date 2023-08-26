@@ -110,19 +110,20 @@
   padding: 5px 10px;
 }
 
+
 /* .name , .price{
   font-size: 14px;
 } */
 
 .price{
-  font-weight: 600; 
 }
 .name{
   color:  #5f6169;
-
+  
 }
 
-.m-comp{
+.price-m-comp{
+  font-weight: 600; 
   font-size: 14px;
 }
 
@@ -200,5 +201,27 @@
   /* color:  #5f6169; */
   font-weight: 400;
 }
+
+
+.wishlist{
+  display: none;
+}
+
+.card:hover .wishlist{
+  display: block;
+}
+
+.card:hover .main-name{
+  display: none;
+}
+
+.wishlist-icon , .wishlisted-icon{
+  display: flex;
+  align-items: center;
+}
+
+
+
+
 
 

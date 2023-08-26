@@ -5,12 +5,12 @@ import Nav from "./Nav";
 import "./Main.css";
 import SideBar from "./SideBar";
 import { BsHeart } from "react-icons/bs";
+import { BsHeartFill } from "react-icons/bs";
 
 const Main = () => {
   const navigate = useNavigate();
   const [wishlist, setWishlist] = useState([]);
   const [currData, setCurrData] = useState(productData);
-  const [isHovering, setIsHovering] = useState(false);
   let wishlistArr = [];
 
   const chooseCurrData = (cdata) => {
@@ -29,6 +29,21 @@ const Main = () => {
 
   // wishlist
   const wishlistHandler = (el) => {
+    let wishlistVal = el.wishlist;
+    console.log(el.wishlist);
+
+    // const it = JSON.parse(localStorage.getItem("wishlisted"));
+    // if (it && wishlist) {
+    //   let items = [...it, wishlist];
+    //   localStorage.setItem("wishlisted", JSON.stringify(items));
+    // } else if (it == null && wishlist) {
+    //   // let items = [bag];
+    //   localStorage.setItem("wishlisted", JSON.stringify(wishlist));
+    // }
+
+    el.wishlist = !wishlistVal;
+    // el.wishlist = !el.wishlist;
+    console.log(el.wishlist);
     if (wishlist.includes(el)) {
       wishlistArr = wishlist.filter((item) => item.key !== el.key);
     } else {
@@ -36,6 +51,7 @@ const Main = () => {
     }
     console.log("wishlist", wishlistArr);
     setWishlist(wishlistArr);
+    sessionStorage.setItem("wishlistArr", JSON.stringify(wishlistArr));
   };
   // sort
   const sortHandler = (e) => {
@@ -55,15 +71,9 @@ const Main = () => {
     } else {
       sortedProducts = productData;
     }
-    setCurrData(sortedProducts);
-  };
-
-  // hover
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-  const handleMouseOut = () => {
-    setIsHovering(false);
+    // ... makes new reference
+    setCurrData([...sortedProducts]);
+    console.log(sortedProducts);
   };
 
   return (
@@ -77,12 +87,13 @@ const Main = () => {
           Shirts For Men <span>- {currData.length} items</span>
         </div>
         {/* sort */}
+
         <div className="mainpt3">
           <div className="filter">FILTERS</div>
           <div className="sort select ">
             <span>Sort by :</span>
             <select onChange={sortHandler} className="sort-box" id="format">
-              {/* <div className="optn-list"> */}
+              \
               <option className="optn" value="Recommended ">
                 Recommended
               </option>
@@ -92,7 +103,6 @@ const Main = () => {
               <option className="optn" value="low">
                 Price: Low To High
               </option>
-              {/* </div> */}
             </select>
           </div>
         </div>
@@ -104,35 +114,41 @@ const Main = () => {
           <div className="deets">
             {currData.map((el) => {
               return (
-                <div
-                  className="card"
-                  onMouseOver={handleMouseOver}
-                  onMouseOut={handleMouseOut}
-                >
+                <div className="card">
                   <div>
                     <div onClick={() => handleCardClick(el)}>
                       <img src={el.img} alt="img" />
                     </div>
                     <div className="info">
-                      {!isHovering ? (
-                        <div onClick={() => handleCardClick(el)}>
-                          <div className="brand">{el.brand}</div>
-                          <div className="name">{el.name}</div>
-                        </div>
-                      ) : (
-                        <div className="wishlist">
-                          <button onClick={() => wishlistHandler(el)}>
-                            <BsHeart />
-                            <span>WISHLIST</span>
-                          </button>
-                        </div>
-                      )}
+                      <div
+                        onClick={() => handleCardClick(el)}
+                        className="main-name"
+                      >
+                        <div className="brand">{el.brand}</div>
+                        <div className="name">{el.name}</div>
+                      </div>
+
+                      <div className="wishlist">
+                        <button className onClick={() => wishlistHandler(el)}>
+                          {!el.wishlist ? (
+                            <div className="wishlisted-icon">
+                              <BsHeartFill style={{ color: "red" }} />
+                              <span>WISHLISTED</span>
+                            </div>
+                          ) : (
+                            <div className="wishlist-icon">
+                              <BsHeart />
+                              <span>WISHLIST</span>
+                            </div>
+                          )}
+                        </button>
+                      </div>
 
                       <div
                         className="card-price"
                         onClick={() => handleCardClick(el)}
                       >
-                        <div className="price m-comp">Rs.{el.price}</div>
+                        <div className="price-m-comp">Rs.{el.price}</div>
                         <div className="ogprice  m-comp">
                           Rs.{el.originalPrice}
                         </div>

@@ -28,6 +28,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import Nav from "./Nav";
 import "./Main.css";
+import { productData } from "../data";
 
 const Wishlist = () => {
   const navigate = useNavigate();
@@ -42,6 +43,17 @@ const Wishlist = () => {
     navigate(`/details/${el.key}`);
   };
 
+  // getitems from local storage
+
+  let wishlistedProducts = JSON.parse(sessionStorage.getItem("wishlistArr"));
+  console.log(productData);
+
+  // different approach
+  // let wishlistedProducts;
+  // wishlistedProducts = productData.filter((item) => item.wishlist === true);
+
+  // console.log(wishlistedProducts);
+
   // hover
 
   return (
@@ -50,39 +62,48 @@ const Wishlist = () => {
 
       <div className="mainpt">
         <div className="wlist">
-          My Wishlist <span>{data.length} products</span>
+          My Wishlist
+          {data.length ? (
+            <span>{data.length} products</span>
+          ) : (
+            <span> 0 products</span>
+          )}
         </div>
         <div className="mainpt4">
           {/* display card */}
           <div className="deets">
-            {data.map((el) => {
-              return (
-                <div className="card">
-                  <div>
-                    <div onClick={() => handleCardClick(el)}>
-                      <img src={el.img} alt="img" />
-                    </div>
-                    <div className="info">
+            {wishlistedProducts ? (
+              wishlistedProducts.map((el) => {
+                return (
+                  <div className="card">
+                    <div>
                       <div onClick={() => handleCardClick(el)}>
-                        <div className="brand">{el.brand}</div>
-                        <div className="name">{el.name}</div>
+                        <img src={el.img} alt="img" />
                       </div>
-
-                      <div
-                        className="card-price"
-                        onClick={() => handleCardClick(el)}
-                      >
-                        <div className="price m-comp">Rs.{el.price}</div>
-                        <div className="ogprice  m-comp">
-                          Rs.{el.originalPrice}
+                      <div className="info">
+                        <div onClick={() => handleCardClick(el)}>
+                          <div className="brand">{el.brand}</div>
+                          <div className="name">{el.name}</div>
                         </div>
-                        <div className="disc  m-comp">({el.discount}OFF)</div>
+
+                        <div
+                          className="card-price"
+                          onClick={() => handleCardClick(el)}
+                        >
+                          <div className="price m-comp">Rs.{el.price}</div>
+                          <div className="ogprice  m-comp">
+                            Rs.{el.originalPrice}
+                          </div>
+                          <div className="disc  m-comp">({el.discount}OFF)</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>

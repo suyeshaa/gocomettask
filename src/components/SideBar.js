@@ -13,7 +13,7 @@ const SideBar = ({ chooseCurrData, dt }) => {
   let colorTags = [];
   var newData = productData;
 
-  function filterProd(productData, discount, brandTags, colorTags) {
+  function filterProd(productData, brandTags, colorTags) {
     console.log("tags", brandTags, colorTags);
     return productData.filter((item) => {
       console.log(item.color, item.brand, brandTags, colorTags);
@@ -45,19 +45,13 @@ const SideBar = ({ chooseCurrData, dt }) => {
         colorTags = color.filter((item) => item !== e.target.value);
       }
     }
-    newData = filterProd(productData, discount, brandTags, colorTags);
+    newData = filterProd(productData, brandTags, colorTags);
 
     console.log("filtereddata", newData);
     setBrand(brandTags);
     setColor(colorTags);
-    newData ? chooseCurrData(newData) : chooseCurrData(productData);
+    newData.length ? chooseCurrData(newData) : chooseCurrData(productData);
     // setData(newData);
-  };
-
-  const discountHandler = (e) => {
-    if (e.target.checked) {
-      setDiscount(e.target.value);
-    }
   };
 
   return (
@@ -131,36 +125,6 @@ const SideBar = ({ chooseCurrData, dt }) => {
               value="Grey"
             />
             <span>Grey</span>
-          </label>
-        </div>
-        <div className="disc-optn">
-          <span>DISCOUNT</span>
-          <label>
-            <input
-              type="radio"
-              name="discount"
-              onChange={discountHandler}
-              value="10"
-            />
-            <span>10% and above</span>
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="discount"
-              onChange={discountHandler}
-              value="30"
-            />
-            <span>30% and above</span>
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="discount"
-              onChange={discountHandler}
-              value="50"
-            />
-            <span>50% and above</span>
           </label>
         </div>
       </div>

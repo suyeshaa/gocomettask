@@ -15,15 +15,19 @@ const Details = () => {
   const [size, setSize] = useState("");
   const [err, setErr] = useState(false);
   const [bag, setBag] = useState([]);
+  const [added, setAdded] = useState(false);
+  const [click, setClick] = useState(false);
 
   let cartItems = [];
 
   const clickHandler = (e) => {
     setSize(e.target.value);
     setErr(false);
+    setClick(true);
   };
 
   const bagHandler = () => {
+    setAdded(true);
     if (!size) {
       setErr(true);
     } else {
@@ -31,18 +35,24 @@ const Details = () => {
       // console.log(cart);
       setBag(product);
     }
-  };
-
-  useEffect(() => {
-    const it = JSON.parse(localStorage.getItem("bagItems"));
-    if (it && bag) {
-      let items = [...it, bag];
-      localStorage.setItem("bagItems", JSON.stringify(items));
-    } else if (it == null && bag) {
-      // let items = [bag];
-      localStorage.setItem("bagItems", JSON.stringify(bag));
+    let it = JSON.parse(sessionStorage.getItem("bagItems"));
+    if (bag) {
+      console.log(bag);
+      if (it != null) {
+        let items = [...it, bag];
+        sessionStorage.setItem("bagItems", JSON.stringify(items));
+      } else {
+        sessionStorage.setItem("bagItems", JSON.stringify(bag));
+      }
     }
-  }, [bag]);
+    // if (it == null && bag) {
+    //   // let items = [bag];
+    //   sessionStorage.setItem("bagItems", JSON.stringify(bag));
+    // } else if (it.length && bag) {
+    //   let items = [...it, bag];
+    //   sessionStorage.setItem("bagItems", JSON.stringify(items));
+    // }
+  };
 
   return (
     <div>
@@ -70,9 +80,11 @@ const Details = () => {
             <div className="size">
               <span>SELECT SIZE</span>
               {err ? <div>select sixe</div> : <div></div>}
+
               <button value="38" onClick={clickHandler}>
                 38
               </button>
+
               <button value="40" onClick={clickHandler}>
                 40
               </button>
@@ -84,12 +96,12 @@ const Details = () => {
           <div className="detailspt2">
             <button className="bag-btn" onClick={bagHandler}>
               <BsFillHandbagFill />
-              <span>ADD TO BAG</span>
+              {added ? <span>ADDED TO BAG</span> : <span>ADD TO BAG</span>}
             </button>
-            <button className="wishlist-btn">
+            {/* <button className="wishlist-btn">
               <BsHeart />
               <span>WISHLIST</span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

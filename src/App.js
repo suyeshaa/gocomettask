@@ -5,8 +5,13 @@ import Wishlist from "./components/Wishlist";
 import SearchedProd from "./components/SearchedProd";
 import Details from "./components/Details";
 import Main from "./components/Main";
+import { useState } from "react";
 
 function App() {
+  const [actData, setActData] = useState([]);
+  const chooseActData = (sdata) => {
+    setActData(sdata);
+  };
   return (
     <Routes>
       <Route path="/" element={<Main />} />

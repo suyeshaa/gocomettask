@@ -18,7 +18,9 @@ const CartModal = ({ setIsOpen }) => {
 
   let discount = totalPrice - actPrice;
 
-  // console.log(totalPrice);
+  // getitems from localstorage
+  const bagItems = JSON.parse(sessionStorage.getItem("bagItems"));
+  console.log(bagItems);
 
   return (
     <div>

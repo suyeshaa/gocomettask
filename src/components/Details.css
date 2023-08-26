@@ -124,3 +124,8 @@ width: 40%;
 .wishlist-btn span{
   padding-left: 10px;
 }
+
+
+.clicked{
+  border: 10px red solid;
+}
