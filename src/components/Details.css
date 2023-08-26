@@ -126,6 +126,20 @@ width: 40%;
 }
 
 
-.clicked{
-  border: 10px red solid;
+.clicked {
+  background-color: red !important;
+}
+
+.pic{
+  height: auto;
+  /* overflow: hidden; */
+}
+
+.pic img{
+  transition: transform 0.5s;
+}
+
+.pic img:hover{
+  transform: scale(1.3);
+  position: relative;
 }

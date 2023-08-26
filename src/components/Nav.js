@@ -22,7 +22,7 @@ const Nav = ({ wishlistArr, chooseCurrData }) => {
     let searchedProduct = productData.filter((item) => {
       return search.toLowerCase() === ""
         ? item
-        : item.name.toLowerCase().includes(search);
+        : item.name.toLowerCase().includes(search.toLowerCase());
     });
 
     console.log(searchedProduct);
@@ -34,11 +34,6 @@ const Nav = ({ wishlistArr, chooseCurrData }) => {
     navigate("/wishlist", { state: wishlistArr });
     // chooseCurrArr(wishlistArr);
   };
-
-  // bag
-  // const handleBagModal = () => {
-  //   setOpen(true);
-  // };
 
   return (
     <div className="navdiv">

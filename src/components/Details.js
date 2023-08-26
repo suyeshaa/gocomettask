@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import { productData } from "../data";
 import { BsFillHandbagFill } from "react-icons/bs";
-import { BsHeart } from "react-icons/bs";
 
 import Nav from "./Nav";
 import "./Details.css";
@@ -11,19 +10,24 @@ const Details = () => {
   const { id } = useParams();
   let product = productData.filter((item) => item.key == id);
   product = product[0];
+  console.log(product);
+  // product.addedToCard = false;
 
   const [size, setSize] = useState("");
   const [err, setErr] = useState(false);
-  const [bag, setBag] = useState([]);
   const [added, setAdded] = useState(false);
-  const [click, setClick] = useState(false);
+
+  const sizes = [38, 40, 42];
+  const [selectedSizeIndex, setSelectedIndex] = useState(null);
 
   let cartItems = [];
 
-  const clickHandler = (e) => {
+  const clickHandler = (e, index) => {
+    setSelectedIndex(index);
+    console.log("clicked", e.target.value);
     setSize(e.target.value);
+    product.size = size;
     setErr(false);
-    setClick(true);
   };
 
   const bagHandler = () => {
@@ -31,27 +35,25 @@ const Details = () => {
     if (!size) {
       setErr(true);
     } else {
+      product.addedToCard = true;
+      console.log(product);
+
       cartItems = [...cartItems, product];
-      // console.log(cart);
-      setBag(product);
-    }
-    let it = JSON.parse(sessionStorage.getItem("bagItems"));
-    if (bag) {
-      console.log(bag);
-      if (it != null) {
-        let items = [...it, bag];
-        sessionStorage.setItem("bagItems", JSON.stringify(items));
-      } else {
-        sessionStorage.setItem("bagItems", JSON.stringify(bag));
+
+      let it = JSON.parse(sessionStorage.getItem("bagItems"));
+      if (product) {
+        console.log(product);
+        if (it != null) {
+          let items = [...it, { ...product, size: { size } }];
+          sessionStorage.setItem("bagItems", JSON.stringify(items));
+        } else {
+          sessionStorage.setItem(
+            "bagItems",
+            JSON.stringify([{ ...product, size: { size } }])
+          );
+        }
       }
     }
-    // if (it == null && bag) {
-    //   // let items = [bag];
-    //   sessionStorage.setItem("bagItems", JSON.stringify(bag));
-    // } else if (it.length && bag) {
-    //   let items = [...it, bag];
-    //   sessionStorage.setItem("bagItems", JSON.stringify(items));
-    // }
   };
 
   return (
@@ -81,16 +83,23 @@ const Details = () => {
               <span>SELECT SIZE</span>
               {err ? <div>select sixe</div> : <div></div>}
 
-              <button value="38" onClick={clickHandler}>
-                38
-              </button>
-
-              <button value="40" onClick={clickHandler}>
-                40
-              </button>
-              <button value="42" onClick={clickHandler}>
-                42
-              </button>
+              {sizes.map((size, index) => {
+                return (
+                  <button
+                    key={size}
+                    className={
+                      index === selectedSizeIndex ||
+                      (product.addedToCard && product.size === size)
+                        ? "clicked"
+                        : ""
+                    }
+                    value={size}
+                    onClick={(e) => clickHandler(e, index)}
+                  >
+                    {size}
+                  </button>
+                );
+              })}
             </div>
           </div>
           <div className="detailspt2">
@@ -98,10 +107,6 @@ const Details = () => {
               <BsFillHandbagFill />
               {added ? <span>ADDED TO BAG</span> : <span>ADD TO BAG</span>}
             </button>
-            {/* <button className="wishlist-btn">
-              <BsHeart />
-              <span>WISHLIST</span>
-            </button> */}
           </div>
         </div>
       </div>
