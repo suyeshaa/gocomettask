@@ -14,4 +14,4 @@ npm install
 ```
    
 
-![Example Image](src/assests/mlogo.png)
+![Example Image](assests/mlogo.png)
