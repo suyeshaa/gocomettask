@@ -31,11 +31,11 @@ const Details = () => {
   };
 
   const bagHandler = () => {
-    setAdded(true);
     if (!size) {
       setErr(true);
     } else {
       product.addedToCard = true;
+      setAdded(true);
       console.log(product);
 
       cartItems = [...cartItems, product];
@@ -81,7 +81,11 @@ const Details = () => {
             <span>inclusive of all tasks</span>
             <div className="size">
               <span>SELECT SIZE</span>
-              {err ? <div>select sixe</div> : <div></div>}
+              {err ? (
+                <div className="size-err">* select size</div>
+              ) : (
+                <div></div>
+              )}
 
               {sizes.map((size, index) => {
                 return (
