@@ -9,7 +9,9 @@ NPM / Yarn and Node.js installed
 ## Installing
 
 Installing NPM modules. Execute these commands from the project directory
-   ```npm install
+   ```
+npm install
+```
    
 
 ### `npm start`
