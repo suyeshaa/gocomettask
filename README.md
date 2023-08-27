@@ -27,7 +27,7 @@ npm install
 
 
 ### Main Page
-![Image Alt Text](src/assets/Screenshot 2023-08-27 101726.png)
+![Image Alt Text](src/assets/Screenshot 2023-08-27 101819.png)
 
 ### Filter & Wishlist 
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 101819.png)
