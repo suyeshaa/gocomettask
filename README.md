@@ -14,17 +14,37 @@ npm install
 ```
 
 ##Features
-- Browse Latest Trends: Explore a vast range of fashion products categorized for men, women, and kids.
+1. Browse Latest Trends: Explore a vast range of fashion products categorized for men, women, and kids.
 
-- Search and Filters: Find your desired items quickly using the search bar and apply filters based on brands, categories, sizes, and more.
+2. Search and Filters: Find your desired items quickly using the search bar and apply filters based on brands, categories, sizes, and more.
 
-- Product Details: View detailed product descriptions, images, prices, and available sizes.
+3. Product Details: View detailed product descriptions, images, prices, and available sizes.
 
-- Add to Cart: Add products to your cart and see them update in real-time.
+4. Add to Cart: Add products to your cart and see them update in real-time.
 
-- Wishlist: Save items for later by adding them to your wishlist.
+5. Wishlist: Save items for later by adding them to your wishlist.
 
 
 
-   
-![Image Alt Text](src/assets/mlogo.png)
+###Main Page
+![Image Alt Text](src/assets/Screenshot 2023-08-27 101726.png)
+
+###Filter & Wishlist 
+![Image Alt Text](src/assets/Screenshot 2023-08-27 101819.png)
+
+###Wishlist Page
+![Image Alt Text](src/assets/Screenshot 2023-08-27 101902.png)
+
+###Searched Products
+![Image Alt Text](src/assets/Screenshot 2023-08-27 101930.png)
+
+###Details Page
+![Image Alt Text](src/assets/Screenshot 2023-08-27 102348.png)
+
+###Cart
+![Image Alt Text](src/assets/Screenshot 2023-08-27 102424.png)
+
+
+
+
+
