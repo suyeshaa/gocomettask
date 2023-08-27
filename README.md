@@ -13,7 +13,7 @@ Installing NPM modules. Execute these commands from the project directory
 npm install
 ```
 
-##Features
+## Features
 1. Browse Latest Trends: Explore a vast range of fashion products categorized for men, women, and kids.
 
 2. Search and Filters: Find your desired items quickly using the search bar and apply filters based on brands, categories, sizes, and more.
@@ -26,22 +26,22 @@ npm install
 
 
 
-###Main Page
+### Main Page
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 101726.png)
 
-###Filter & Wishlist 
+### Filter & Wishlist 
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 101819.png)
 
-###Wishlist Page
+### Wishlist Page
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 101902.png)
 
-###Searched Products
+### Searched Products
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 101930.png)
 
-###Details Page
+### Details Page
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 102348.png)
 
-###Cart
+### Cart
 ![Image Alt Text](src/assets/Screenshot 2023-08-27 102424.png)
 
 
