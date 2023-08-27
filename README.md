@@ -15,3 +15,4 @@ npm install
    
 
 ![Example Image](assests/mlogo.png)
+![Image Alt Text](src/assets/mlogo.png)
