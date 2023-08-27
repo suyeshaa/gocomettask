@@ -1,10 +1,15 @@
-# Getting Started with Create React App
+# Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+NPM / Yarn and Node.js installed
+
+## Installing
+
+Installing NPM modules. Execute these commands from the project directory
+npm install
 
 ### `npm start`
 
