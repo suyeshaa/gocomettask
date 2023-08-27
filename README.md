@@ -12,7 +12,19 @@ Installing NPM modules. Execute these commands from the project directory
    ```
 npm install
 ```
-   
 
-![Example Image](assests/mlogo.png)
+##Features
+- Browse Latest Trends: Explore a vast range of fashion products categorized for men, women, and kids.
+
+- Search and Filters: Find your desired items quickly using the search bar and apply filters based on brands, categories, sizes, and more.
+
+- Product Details: View detailed product descriptions, images, prices, and available sizes.
+
+- Add to Cart: Add products to your cart and see them update in real-time.
+
+- Wishlist: Save items for later by adding them to your wishlist.
+
+
+
+   
 ![Image Alt Text](src/assets/mlogo.png)
