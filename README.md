@@ -27,22 +27,22 @@ npm install
 
 
 ### Main Page
-![Image Alt Text](src/assets/Screenshot 2023-08-27 101819.png)
+![Image Alt Text](src/assets/mainpage.png)
 
 ### Filter & Wishlist 
-![Image Alt Text](src/assets/Screenshot 2023-08-27 101819.png)
+![Image Alt Text](src/assets/filter.png)
 
 ### Wishlist Page
-![Image Alt Text](src/assets/Screenshot 2023-08-27 101902.png)
+![Image Alt Text](src/assets/wishlist.png)
 
 ### Searched Products
-![Image Alt Text](src/assets/Screenshot 2023-08-27 101930.png)
+![Image Alt Text](src/assets/search.png)
 
 ### Details Page
-![Image Alt Text](src/assets/Screenshot 2023-08-27 102348.png)
+![Image Alt Text](src/assets/details.png)
 
 ### Cart
-![Image Alt Text](src/assets/Screenshot 2023-08-27 102424.png)
+![Image Alt Text](src/assets/cart.png)
 
 
 
